@@ -6,7 +6,7 @@
 module.exports = function(config) {
   'use strict';
 
-  var browsers = ['PhantomJS', 'Firefox'];
+  var browsers = ['PhantomJS'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');

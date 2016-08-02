@@ -11,11 +11,16 @@ describe('Service: someService', function () {
     someService = _someService_;
   }));
 
-  it('should have a get method', function () {
+  afterEach(function () {
+    $httpBackend.verifyNoOutstandingExpectation();
+  });
 
+  it('should have a get method', function () {
+    expect(someService.get).toBeTruthy();
   });
 
   it('should make a GET call to /some-url', function () {
+    $httpBackend.expectGET('/some-url?bar=bar&foo=foo').respond(200, '');
     someService.get('foo', 'bar');
   });
 });
