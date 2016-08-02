@@ -1,6 +1,5 @@
 {
   "name": "angularjstests",
-  "private": true,
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
